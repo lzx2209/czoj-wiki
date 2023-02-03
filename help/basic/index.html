@@ -1,0 +1,854 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>基础指南 - CZOJ's Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.975780f9.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ffffff">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="green">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#基础指南" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="CZOJ&#39;s Wiki" class="md-header__button md-logo" aria-label="CZOJ's Wiki" data-md-component="logo">
+      
+  <img src="https://picture-bed-1312823107.cos.ap-nanjing.myqcloud.com/202301262021799.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CZOJ's Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              基础指南
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        简介
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
+        使用指南
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="CZOJ&#39;s Wiki" class="md-nav__button md-logo" aria-label="CZOJ's Wiki" data-md-component="logo">
+      
+  <img src="https://picture-bed-1312823107.cos.ap-nanjing.myqcloud.com/202301262021799.png" alt="logo">
+
+    </a>
+    CZOJ's Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../..">简介</a>
+          
+            <label for="__nav_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="简介" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          简介
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../admin/" class="md-nav__link">
+        管理员&联系方式
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../privacy/" class="md-nav__link">
+        隐私政策
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tos/" class="md-nav__link">
+        服务条款
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../changelog/" class="md-nav__link">
+        更新日志
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          使用指南
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="使用指南" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          使用指南
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          基础指南
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        基础指南
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#注册" class="md-nav__link">
+    注册
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#做题" class="md-nav__link">
+    做题
+  </a>
+  
+    <nav class="md-nav" aria-label="做题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#评测" class="md-nav__link">
+    评测
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#限制" class="md-nav__link">
+    限制
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#输入输出" class="md-nav__link">
+    输入输出
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#训练" class="md-nav__link">
+    训练
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#比赛" class="md-nav__link">
+    比赛
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#作业" class="md-nav__link">
+    作业
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#评测记录" class="md-nav__link">
+    评测记录
+  </a>
+  
+    <nav class="md-nav" aria-label="评测记录">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#评测状态" class="md-nav__link">
+    评测状态
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#排名" class="md-nav__link">
+    排名
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#域" class="md-nav__link">
+    域
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#markdown" class="md-nav__link">
+    Markdown
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faqs/" class="md-nav__link">
+        常见问题
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#注册" class="md-nav__link">
+    注册
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#做题" class="md-nav__link">
+    做题
+  </a>
+  
+    <nav class="md-nav" aria-label="做题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#评测" class="md-nav__link">
+    评测
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#限制" class="md-nav__link">
+    限制
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#输入输出" class="md-nav__link">
+    输入输出
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#训练" class="md-nav__link">
+    训练
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#比赛" class="md-nav__link">
+    比赛
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#作业" class="md-nav__link">
+    作业
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#评测记录" class="md-nav__link">
+    评测记录
+  </a>
+  
+    <nav class="md-nav" aria-label="评测记录">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#评测状态" class="md-nav__link">
+    评测状态
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#排名" class="md-nav__link">
+    排名
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#域" class="md-nav__link">
+    域
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#markdown" class="md-nav__link">
+    Markdown
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="基础指南">基础指南<a class="headerlink" href="#基础指南" title="Anchor link to this section for reference">&para;</a></h1>
+<h2 id="注册">注册<a class="headerlink" href="#注册" title="Anchor link to this section for reference">&para;</a></h2>
+<p><a href="http://47.103.114.172/register">http://47.103.114.172/register</a>，根据注册步骤即可</p>
+<h2 id="做题">做题<a class="headerlink" href="#做题" title="Anchor link to this section for reference">&para;</a></h2>
+<p>进入 <a href="http://47.103.114.172/p">http://47.103.114.172/p</a></p>
+<p>点击想要做的题目</p>
+<p>点击右侧 <code>递交</code> 即可提交</p>
+<p>也可以使用在线 IDE 来编程</p>
+<blockquote>
+<p>请勿抄袭代码，抄袭严重可能会被封号</p>
+</blockquote>
+<h3 id="评测">评测<a class="headerlink" href="#评测" title="Anchor link to this section for reference">&para;</a></h3>
+<p>见 <a href="http://47.103.114.172/wiki/help">帮助 - CZOJ</a></p>
+<h3 id="限制">限制<a class="headerlink" href="#限制" title="Anchor link to this section for reference">&para;</a></h3>
+<p>CZOJ 评测机使用进程的CPU时间计算时间消耗，时间的限定为题目中评测点所指定的时间。</p>
+<p>CZOJ 评测机使用进程虚拟内存与物理内存总和计算内存空间消耗。内存空间默认限定为 <span class="arithmatex">\(256\)</span> MiB，题目中特别指明的，限定为题目中评测点所指定的内存空间。</p>
+<h3 id="输入输出">输入输出<a class="headerlink" href="#输入输出" title="Anchor link to this section for reference">&para;</a></h3>
+<p>若无特殊说明，CZOJ 使用标准输入输出（控制台输入输出，屏幕输入输出，STD I/O）。</p>
+<h3 id="训练">训练<a class="headerlink" href="#训练" title="Anchor link to this section for reference">&para;</a></h3>
+<p><a href="http://47.103.114.172/training">http://47.103.114.172/training</a> </p>
+<p>此处包含多个训练计划，你可以报名并参加计划</p>
+<h3 id="比赛">比赛<a class="headerlink" href="#比赛" title="Anchor link to this section for reference">&para;</a></h3>
+<p><a href="http://47.103.114.172/contest">http://47.103.114.172/contest</a></p>
+<p>我们会举办各种各样的比赛</p>
+<p>欢迎报名参加</p>
+<p>比赛分 <code>rated</code> 和 <code>unrated</code>，可看比赛是否有 <code>rated</code> 标识</p>
+<p><code>rated</code> 比赛会加比赛分</p>
+<p>按照赛制不同，有不同的递交、排名规则。</p>
+<p>OI 赛制所有题目均以最后一次递交为准，特别地，请避免编译错误。</p>
+<p>OI 赛制排名规则为：总分高的排在前面，总分相等则排名相同。</p>
+<p>ACM/ICPC 赛制所有题目递交后立即评测，以是否通过为准。</p>
+<p>ACM/ICPC 赛制排名规则为：通过题目数多的排在前面，通过题目数相同的做题耗时（含罚时）少的排在前。</p>
+<p>乐多 赛制下，选手可以多次提交一道题目，并获得实时评测结果。</p>
+<p>乐多 赛制下，多次提交会导致选手的得分被扣除，排行榜将显示用户的最高得分。</p>
+<p>乐多 赛制下，每道题的最终得分为： <span class="arithmatex">\(s \times max⁡(0.95^n,0.7)\)</span> 。<span class="arithmatex">\(s,n\)</span> 分别代表本次得分和本次提交前的尝试次数。</p>
+<p>乐多 排名规则为：按照如上规则折算后的分数从高到低排名。</p>
+<p>时间与空间限制以题目说明为准，默认限制参见<a href="http://47.103.114.172/wiki/help#limits">限制</a>。</p>
+<h2 id="作业">作业<a class="headerlink" href="#作业" title="Anchor link to this section for reference">&para;</a></h2>
+<p><a href="http://47.103.114.172/homework">http://47.103.114.172/homework</a></p>
+<p>教师会在这里布置作业，你可以点击对应作业并完成</p>
+<h2 id="评测记录">评测记录<a class="headerlink" href="#评测记录" title="Anchor link to this section for reference">&para;</a></h2>
+<p><a href="http://47.103.114.172/record">http://47.103.114.172/record</a></p>
+<p>你可以查看到本站的评测记录，也可以筛选后查看某个人、某一题的记录</p>
+<h3 id="评测状态">评测状态<a class="headerlink" href="#评测状态" title="Anchor link to this section for reference">&para;</a></h3>
+<p>见 <a href="http://47.103.114.172/wiki/help#status">帮助 - CZOJ</a></p>
+<h2 id="排名">排名<a class="headerlink" href="#排名" title="Anchor link to this section for reference">&para;</a></h2>
+<p><a href="http://47.103.114.172/ranking">http://47.103.114.172/ranking</a></p>
+<p>按照 RP 排行</p>
+<h2 id="域">域<a class="headerlink" href="#域" title="Anchor link to this section for reference">&para;</a></h2>
+<p>每个用户可以创建自己的域。比如，老师可以为课程创建一个域，然后把题目和学生加入到此域中。再如，可以把域作为团队功能。</p>
+<p>通过合理的设置角色及其权限，可以把域设为公开或私有。</p>
+<p>默认域为 system，用户直接访问 CZOJ 域名就会访问此域，点击 CZOJ Logo 会从任意域跳转回 system 域。</p>
+<p>每个域的题库、讨论、训练以及比赛是独立且自治的。</p>
+<h2 id="markdown">Markdown<a class="headerlink" href="#markdown" title="Anchor link to this section for reference">&para;</a></h2>
+<p>CZOJ 的 Markdown 区域使用 <a href="http://commonmark.org/help/">CommonMark</a> 语法，并扩展了以下功能：</p>
+<ul>
+<li>基于 <a href="https://onemathematicalcat.org/MathJaxDocumentation/TeXSyntax.htm">Katex</a> 语法的数学公式支持。</li>
+<li>使用 <code>@[](/user/uid)</code> 提及用户。</li>
+<li>使用 <code>==text==</code> 高亮文本。</li>
+<li>使用 <code>![alt](url =100x100)</code> 设置嵌入图片的大小。</li>
+<li>使用 <code>@[video](https://.../a.mp4)</code> 嵌入视频文件。</li>
+<li>使用 <code>@[bilibili](BVxxx)</code> 嵌入站外视频。</li>
+<li>使用 <code>@[pdf](https://.../a.pdf)</code> 嵌入 PDF 文件。</li>
+<li>在题目/比赛/作业/训练中，可使用 <code>file://文件名</code> 的链接格式引用对应的附件。（推荐）</li>
+<li>支持使用一部分 HTML 标签。</li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            回到页面顶部
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="页脚" >
+      
+        
+        <a href="../../changelog/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 更新日志" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              更新日志
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../faqs/" class="md-footer__link md-footer__link--next" aria-label="下一页: 常见问题" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              常见问题
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023 CZOJ
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.top"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+    
+  </body>
+</html>
