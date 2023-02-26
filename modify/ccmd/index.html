@@ -84,7 +84,7 @@
   <nav class="md-header__inner md-grid" aria-label="页眉">
     <a href="../.." title="CZOJ&#39;s Wiki" class="md-header__button md-logo" aria-label="CZOJ's Wiki" data-md-component="logo">
       
-  <img src="https://picture-bed-1312823107.cos.ap-nanjing.myqcloud.com/202301262021799.png" alt="logo">
+  <img src="http://47.103.114.172/nav_logo_dark.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -242,7 +242,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="CZOJ&#39;s Wiki" class="md-nav__button md-logo" aria-label="CZOJ's Wiki" data-md-component="logo">
       
-  <img src="https://picture-bed-1312823107.cos.ap-nanjing.myqcloud.com/202301262021799.png" alt="logo">
+  <img src="http://47.103.114.172/nav_logo_dark.png" alt="logo">
 
     </a>
     CZOJ's Wiki
@@ -709,35 +709,35 @@
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>hydrooj cli user setSuperAdmin &lt;uid&gt;
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>hydrooj<span class="w"> </span>cli<span class="w"> </span>user<span class="w"> </span>setSuperAdmin<span class="w"> </span>&lt;uid&gt;
 
 <span class="c1"># 如设置 uid 为 2 的用户为管理员：</span>
-hydrooj cli user setSuperAdmin <span class="m">2</span>
+hydrooj<span class="w"> </span>cli<span class="w"> </span>user<span class="w"> </span>setSuperAdmin<span class="w"> </span><span class="m">2</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="设置用户权限">设置用户权限<a class="headerlink" href="#设置用户权限" title="Anchor link to this section for reference">&para;</a></h2>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>hydrooj cli user setPriv &lt;uid&gt; &lt;priv&gt;
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>hydrooj<span class="w"> </span>cli<span class="w"> </span>user<span class="w"> </span>setPriv<span class="w"> </span>&lt;uid&gt;<span class="w"> </span>&lt;priv&gt;
 </code></pre></div></td></tr></table></div>
 <p>参数 <code>priv</code> 见 <a href="https://hydro.js.org/dev/PERM_PRIV/">权限节点 | Hydro</a></p>
 <h2 id="更改用户密码">更改用户密码<a class="headerlink" href="#更改用户密码" title="Anchor link to this section for reference">&para;</a></h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>hydrooj cli user setPassword &lt;uid&gt; &lt;password&gt;
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>hydrooj<span class="w"> </span>cli<span class="w"> </span>user<span class="w"> </span>setPassword<span class="w"> </span>&lt;uid&gt;<span class="w"> </span>&lt;password&gt;
 
 <span class="c1"># 如将 uid 为 1 的用户的密码改为 hydrohydro：</span>
-hydrooj cli user setPassword <span class="m">1</span> hydrohydro
+hydrooj<span class="w"> </span>cli<span class="w"> </span>user<span class="w"> </span>setPassword<span class="w"> </span><span class="m">1</span><span class="w"> </span>hydrohydro
 </code></pre></div></td></tr></table></div>
 <h2 id="封禁用户">封禁用户<a class="headerlink" href="#封禁用户" title="Anchor link to this section for reference">&para;</a></h2>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>hydrooj cli user setPriv &lt;uid&gt; <span class="m">0</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>hydrooj<span class="w"> </span>cli<span class="w"> </span>user<span class="w"> </span>setPriv<span class="w"> </span>&lt;uid&gt;<span class="w"> </span><span class="m">0</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="封禁ip邮箱">封禁IP/邮箱<a class="headerlink" href="#封禁ip邮箱" title="Anchor link to this section for reference">&para;</a></h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># key 格式为 ip::xxx.xxx.xxx.xxx （封禁 IP 访问） 或是 mail::xxx.com （禁止 xxx.com 的邮箱注册）</span>
-hydrooj cli blacklist add &lt;key&gt; <span class="o">[</span>duration<span class="o">]</span> <span class="c1"># 将 &lt;key&gt; 拉入黑名单，时长为 [duration] （以月为单位的整数，默认为 12，若 duration=0 则永久封禁）</span>
-hydrooj cli blacklist get &lt;key&gt; <span class="c1"># 获取黑名单中有关 &lt;key&gt; 的信息</span>
-hydrooj cli blacklist del &lt;key&gt; <span class="c1"># 将 &lt;key&gt; 移出黑名单</span>
+hydrooj<span class="w"> </span>cli<span class="w"> </span>blacklist<span class="w"> </span>add<span class="w"> </span>&lt;key&gt;<span class="w"> </span><span class="o">[</span>duration<span class="o">]</span><span class="w"> </span><span class="c1"># 将 &lt;key&gt; 拉入黑名单，时长为 [duration] （以月为单位的整数，默认为 12，若 duration=0 则永久封禁）</span>
+hydrooj<span class="w"> </span>cli<span class="w"> </span>blacklist<span class="w"> </span>get<span class="w"> </span>&lt;key&gt;<span class="w"> </span><span class="c1"># 获取黑名单中有关 &lt;key&gt; 的信息</span>
+hydrooj<span class="w"> </span>cli<span class="w"> </span>blacklist<span class="w"> </span>del<span class="w"> </span>&lt;key&gt;<span class="w"> </span><span class="c1"># 将 &lt;key&gt; 移出黑名单</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="注册用户">注册用户<a class="headerlink" href="#注册用户" title="Anchor link to this section for reference">&para;</a></h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -745,31 +745,31 @@ hydrooj cli blacklist del &lt;key&gt; <span class="c1"># 将 &lt;key&gt; 移出�
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>hydrooj cli user create &lt;mail&gt; &lt;username&gt; &lt;password&gt; &lt;uid&gt;
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>hydrooj<span class="w"> </span>cli<span class="w"> </span>user<span class="w"> </span>create<span class="w"> </span>&lt;mail&gt;<span class="w"> </span>&lt;username&gt;<span class="w"> </span>&lt;password&gt;<span class="w"> </span>&lt;uid&gt;
 <span class="c1"># 该用户的邮箱、用户名和密码</span>
 
 <span class="c1"># 如创建邮箱为 hydro@hydro.local，用户名为 Hydro，密码为 hydrohydro ，UID 为 2 的用户：</span>
 <span class="c1"># 请确保 UID 为不小于 2 的正整数且未被占用，邮箱和用户名均不重复。</span>
-hydrooj cli user create hydro@hydro.local Hydro hydrohydro <span class="m">2</span>
+hydrooj<span class="w"> </span>cli<span class="w"> </span>user<span class="w"> </span>create<span class="w"> </span>hydro@hydro.local<span class="w"> </span>Hydro<span class="w"> </span>hydrohydro<span class="w"> </span><span class="m">2</span>
 </code></pre></div></td></tr></table></div>
 <p><strong>注意:不常用，通常使用 <a href="http://47.103.114.172/manage/userimport">导入用户 - CZOJ</a></strong></p>
 <h2 id="更改用户名">更改用户名<a class="headerlink" href="#更改用户名" title="Anchor link to this section for reference">&para;</a></h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>hydrooj cli user setUname &lt;uid&gt; &lt;name&gt;
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>hydrooj<span class="w"> </span>cli<span class="w"> </span>user<span class="w"> </span>setUname<span class="w"> </span>&lt;uid&gt;<span class="w"> </span>&lt;name&gt;
 
 <span class="c1"># 如将 uid 为 1 的用户的用户名改为 CZOJ</span>
-hydrooj cli user setUname <span class="m">1</span> CZOJ
+hydrooj<span class="w"> </span>cli<span class="w"> </span>user<span class="w"> </span>setUname<span class="w"> </span><span class="m">1</span><span class="w"> </span>CZOJ
 </code></pre></div></td></tr></table></div>
 <h2 id="更改用户邮箱">更改用户邮箱<a class="headerlink" href="#更改用户邮箱" title="Anchor link to this section for reference">&para;</a></h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>hydrooj cli user setEmail &lt;uid&gt; &lt;email&gt;
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>hydrooj<span class="w"> </span>cli<span class="w"> </span>user<span class="w"> </span>setEmail<span class="w"> </span>&lt;uid&gt;<span class="w"> </span>&lt;email&gt;
 
 <span class="c1"># 如将 uid 为 3 的用户的邮箱改为 lzx@czoier.top</span>
-hydrooj cli user setEmail <span class="m">3</span> lzx@czoier.top
+hydrooj<span class="w"> </span>cli<span class="w"> </span>user<span class="w"> </span>setEmail<span class="w"> </span><span class="m">3</span><span class="w"> </span>lzx@czoier.top
 </code></pre></div></td></tr></table></div>
 <h2 id="更多">更多<a class="headerlink" href="#更多" title="Anchor link to this section for reference">&para;</a></h2>
 <p>请访问 <a href="https://github.com/hydro-dev/Hydro/tree/master/packages/hydrooj/src/model">GitHub</a> 查看更多，或联系 lzx</p>
